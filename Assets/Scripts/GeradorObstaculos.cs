@@ -31,10 +31,10 @@ public class GeradorObstaculos : MonoBehaviour
     
     void GerarCloneCoin()
     {
-        float x = personagem.transform.position.x + 12f;
-        float y = -3.2f;
-        var spawnCol = new Vector2(x, y);       
-        Instantiate(coin, spawnCol, Quaternion.identity);
+        Vector2 spawn;
+        spawn=CheckDistance();
+        
+        Instantiate(coin, spawn, Quaternion.identity);
     }
     void GerarCloneBoost()
     {
@@ -43,6 +43,26 @@ public class GeradorObstaculos : MonoBehaviour
         var spawnCol = new Vector2(x, y);
         //posicaoAleatoria = CheckDistanciaObstaculos();
         Instantiate(boost, spawnCol, Quaternion.identity);
+    }
+    Vector2 CheckDistance()
+    {
+        Vector2 retornoSpawn = Vector2.zero;
+        float x = personagem.transform.position.x + 12f;
+        float y = -3.2f;
+        var spawnCol = new Vector2(x, y);
+        GameObject[] obstaculo = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (GameObject obs in obstaculo)
+        {
+            if(Vector3.Distance(obs.transform.position, spawnCol) > 1)
+            {
+                retornoSpawn=spawnCol;
+            }
+            else
+            {
+                CheckDistance();
+            }
+        }
+        return retornoSpawn;
     }
    
     
