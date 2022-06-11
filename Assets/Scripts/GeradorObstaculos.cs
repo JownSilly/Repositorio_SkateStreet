@@ -11,7 +11,6 @@ public class GeradorObstaculos : MonoBehaviour
     public GameObject personagem;
     private int i;
     public float delayInicial, delayObj, delayObj2;
-    Vector3 posicaoAleatoria;
     // Start is called before the first frame update
     void Start()
     {

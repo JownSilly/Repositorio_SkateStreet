@@ -265,7 +265,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 215
+    m_FontSize: 153
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 962620316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 334c63ad48d9dfd47aac5232849ee4a4, type: 3}
+  m_Script: {fileID: 11500000, guid: cb2733d49ed269849a770184ff5e493a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1324457478
