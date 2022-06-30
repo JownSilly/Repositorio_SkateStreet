@@ -17,10 +17,10 @@ public class BoardCollision : MonoBehaviour
         {
             player.setJumping(false);
         }else if(collision.gameObject.CompareTag("Obstacle")){
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Fase");
         }else if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Fim de Jogo");
         }
     }
     // Update is called once per frame

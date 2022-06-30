@@ -8,6 +8,6 @@ public class ButtonScript : MonoBehaviour
 {
 
     public void Reiniciar() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Fase");
     }
 }
